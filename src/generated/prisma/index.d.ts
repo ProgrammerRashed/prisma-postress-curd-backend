@@ -3485,9 +3485,9 @@ export namespace Prisma {
     id?: string
     email: string
     password: string
-    role: $Enums.UserRole
-    needPasswordChange: boolean
-    status: $Enums.UserStatus
+    role?: $Enums.UserRole
+    needPasswordChange?: boolean
+    status?: $Enums.UserStatus
     createdAt?: Date | string
     updatedAt?: Date | string
     admin?: AdminCreateNestedOneWithoutUserInput
@@ -3497,9 +3497,9 @@ export namespace Prisma {
     id?: string
     email: string
     password: string
-    role: $Enums.UserRole
-    needPasswordChange: boolean
-    status: $Enums.UserStatus
+    role?: $Enums.UserRole
+    needPasswordChange?: boolean
+    status?: $Enums.UserStatus
     createdAt?: Date | string
     updatedAt?: Date | string
     admin?: AdminUncheckedCreateNestedOneWithoutUserInput
@@ -3533,9 +3533,9 @@ export namespace Prisma {
     id?: string
     email: string
     password: string
-    role: $Enums.UserRole
-    needPasswordChange: boolean
-    status: $Enums.UserStatus
+    role?: $Enums.UserRole
+    needPasswordChange?: boolean
+    status?: $Enums.UserStatus
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4143,9 +4143,9 @@ export namespace Prisma {
     id?: string
     email: string
     password: string
-    role: $Enums.UserRole
-    needPasswordChange: boolean
-    status: $Enums.UserStatus
+    role?: $Enums.UserRole
+    needPasswordChange?: boolean
+    status?: $Enums.UserStatus
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4154,9 +4154,9 @@ export namespace Prisma {
     id?: string
     email: string
     password: string
-    role: $Enums.UserRole
-    needPasswordChange: boolean
-    status: $Enums.UserStatus
+    role?: $Enums.UserRole
+    needPasswordChange?: boolean
+    status?: $Enums.UserStatus
     createdAt?: Date | string
     updatedAt?: Date | string
   }
