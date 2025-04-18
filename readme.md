@@ -45,11 +45,9 @@ All errors follow a consistent format:
   "success": false,
   "status": 404,
   "message": "Customer not found",
-  "stack": "Optional stack trace (development only)"
+  "stack": "Optional stack trace"
 }
-
-
-Sure! Below is the rewritten content formatted as a `.reme` file. The `.reme` format is typically used for documentation or instructions, so I'll structure it accordingly with clear sections and headings.
+```
 
 ---
 
