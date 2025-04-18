@@ -4,3 +4,7 @@ node_modules
 prisma/migrations
 /dist
 .vercel
+
+
+# Optional: ignore all generated files
+src/generated/
