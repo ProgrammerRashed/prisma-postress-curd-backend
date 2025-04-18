@@ -187,7 +187,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:12345678@localhost:5432/ph_healthcare?schema=public"
+        "value": "postgresql://neondb_owner:npg_HidJbDYS23uB@ep-delicate-forest-a8a16m0q-pooler.eastus2.azure.neon.tech/neondb?sslmode=require"
       }
     }
   },
