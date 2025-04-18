@@ -118,7 +118,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 });
 
 exports.Prisma.CustomerScalarFieldEnum = {
-  id: 'id',
+  customerId: 'customerId',
   email: 'email',
   name: 'name',
   phone: 'phone',
@@ -127,7 +127,7 @@ exports.Prisma.CustomerScalarFieldEnum = {
 };
 
 exports.Prisma.BikeScalarFieldEnum = {
-  id: 'id',
+  bikeId: 'bikeId',
   brand: 'brand',
   model: 'model',
   year: 'year',
@@ -137,7 +137,7 @@ exports.Prisma.BikeScalarFieldEnum = {
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {
-  id: 'id',
+  serviceId: 'serviceId',
   bikeId: 'bikeId',
   description: 'description',
   serviceDate: 'serviceDate',

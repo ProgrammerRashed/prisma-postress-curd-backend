@@ -19,7 +19,9 @@ const getOverdueServicesFromDB = async ():Promise<Service[]> => {
 }
 
 const getSingleServiceFromDB = async (id: string): Promise<Service | null> => {
-  return prisma.service.findUnique({ where: { id } });
+  return prisma.service.findUniqueOrThrow({  where: {
+    serviceId: id,
+  }});
 };
 
 const updateServiceIntoDB = async (
@@ -27,7 +29,9 @@ const updateServiceIntoDB = async (
   payload: UpdateServiceInput
 ): Promise<Service> => {
   return prisma.service.update({
-    where: { id },
+    where: {
+      serviceId: id,
+    },
     data: {
       ...payload,
       status: "DONE",
@@ -36,7 +40,7 @@ const updateServiceIntoDB = async (
 };
 
 const deleteSingleServiceFromDB = async (id: string): Promise<Service> => {
-  return prisma.service.delete({ where: { id } });
+  return prisma.service.delete({ where: {  serviceId: id } });
 };
 
 export const ServicesService = {

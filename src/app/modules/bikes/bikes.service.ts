@@ -16,7 +16,7 @@ const getAllBikeFromDB = async () => {
 const updateBikeIntoDB = async (id: string, payload: Partial<Bike>) => {
   const result = await prisma.bike.update({
     where: {
-      id: id,
+      bikeId: id,
     },
     data: payload,
   });
@@ -26,7 +26,7 @@ const updateBikeIntoDB = async (id: string, payload: Partial<Bike>) => {
 const getSingleBikeFromDB = async (id: string) => {
   const result = await prisma.bike.findUniqueOrThrow({
     where: {
-      id: id,
+      bikeId: id,
     },
   });
   return result;
@@ -35,7 +35,7 @@ const getSingleBikeFromDB = async (id: string) => {
 const deleteSingleBikeFromDB = async (id: string) => {
   const result = await prisma.bike.delete({
     where: {
-      id: id,
+      bikeId: id,
     },
   });
   return result;

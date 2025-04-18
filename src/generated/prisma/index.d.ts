@@ -1141,7 +1141,7 @@ export namespace Prisma {
   }
 
   export type CustomerMinAggregateOutputType = {
-    id: string | null
+    customerId: string | null
     email: string | null
     name: string | null
     phone: string | null
@@ -1150,7 +1150,7 @@ export namespace Prisma {
   }
 
   export type CustomerMaxAggregateOutputType = {
-    id: string | null
+    customerId: string | null
     email: string | null
     name: string | null
     phone: string | null
@@ -1159,7 +1159,7 @@ export namespace Prisma {
   }
 
   export type CustomerCountAggregateOutputType = {
-    id: number
+    customerId: number
     email: number
     name: number
     phone: number
@@ -1170,7 +1170,7 @@ export namespace Prisma {
 
 
   export type CustomerMinAggregateInputType = {
-    id?: true
+    customerId?: true
     email?: true
     name?: true
     phone?: true
@@ -1179,7 +1179,7 @@ export namespace Prisma {
   }
 
   export type CustomerMaxAggregateInputType = {
-    id?: true
+    customerId?: true
     email?: true
     name?: true
     phone?: true
@@ -1188,7 +1188,7 @@ export namespace Prisma {
   }
 
   export type CustomerCountAggregateInputType = {
-    id?: true
+    customerId?: true
     email?: true
     name?: true
     phone?: true
@@ -1270,7 +1270,7 @@ export namespace Prisma {
   }
 
   export type CustomerGroupByOutputType = {
-    id: string
+    customerId: string
     email: string
     name: string
     phone: string
@@ -1296,7 +1296,7 @@ export namespace Prisma {
 
 
   export type CustomerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    customerId?: boolean
     email?: boolean
     name?: boolean
     phone?: boolean
@@ -1307,7 +1307,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["customer"]>
 
   export type CustomerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    customerId?: boolean
     email?: boolean
     name?: boolean
     phone?: boolean
@@ -1316,7 +1316,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["customer"]>
 
   export type CustomerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    customerId?: boolean
     email?: boolean
     name?: boolean
     phone?: boolean
@@ -1325,7 +1325,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["customer"]>
 
   export type CustomerSelectScalar = {
-    id?: boolean
+    customerId?: boolean
     email?: boolean
     name?: boolean
     phone?: boolean
@@ -1333,7 +1333,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type CustomerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "phone" | "createdAt" | "updatedAt", ExtArgs["result"]["customer"]>
+  export type CustomerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"customerId" | "email" | "name" | "phone" | "createdAt" | "updatedAt", ExtArgs["result"]["customer"]>
   export type CustomerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     bikes?: boolean | Customer$bikesArgs<ExtArgs>
     _count?: boolean | CustomerCountOutputTypeDefaultArgs<ExtArgs>
@@ -1347,7 +1347,7 @@ export namespace Prisma {
       bikes: Prisma.$BikePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      customerId: string
       email: string
       name: string
       phone: string
@@ -1436,8 +1436,8 @@ export namespace Prisma {
      * // Get first 10 Customers
      * const customers = await prisma.customer.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const customerWithIdOnly = await prisma.customer.findMany({ select: { id: true } })
+     * // Only select the `customerId`
+     * const customerWithCustomerIdOnly = await prisma.customer.findMany({ select: { customerId: true } })
      * 
      */
     findMany<T extends CustomerFindManyArgs>(args?: SelectSubset<T, CustomerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -1481,9 +1481,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Create many Customers and only return the `id`
-     * const customerWithIdOnly = await prisma.customer.createManyAndReturn({
-     *   select: { id: true },
+     * // Create many Customers and only return the `customerId`
+     * const customerWithCustomerIdOnly = await prisma.customer.createManyAndReturn({
+     *   select: { customerId: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -1572,9 +1572,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Customers and only return the `id`
-     * const customerWithIdOnly = await prisma.customer.updateManyAndReturn({
-     *   select: { id: true },
+     * // Update zero or more Customers and only return the `customerId`
+     * const customerWithCustomerIdOnly = await prisma.customer.updateManyAndReturn({
+     *   select: { customerId: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1777,7 +1777,7 @@ export namespace Prisma {
    * Fields of the Customer model
    */
   interface CustomerFieldRefs {
-    readonly id: FieldRef<"Customer", 'String'>
+    readonly customerId: FieldRef<"Customer", 'String'>
     readonly email: FieldRef<"Customer", 'String'>
     readonly name: FieldRef<"Customer", 'String'>
     readonly phone: FieldRef<"Customer", 'String'>
@@ -2234,7 +2234,7 @@ export namespace Prisma {
   }
 
   export type BikeMinAggregateOutputType = {
-    id: string | null
+    bikeId: string | null
     brand: string | null
     model: string | null
     year: number | null
@@ -2244,7 +2244,7 @@ export namespace Prisma {
   }
 
   export type BikeMaxAggregateOutputType = {
-    id: string | null
+    bikeId: string | null
     brand: string | null
     model: string | null
     year: number | null
@@ -2254,7 +2254,7 @@ export namespace Prisma {
   }
 
   export type BikeCountAggregateOutputType = {
-    id: number
+    bikeId: number
     brand: number
     model: number
     year: number
@@ -2274,7 +2274,7 @@ export namespace Prisma {
   }
 
   export type BikeMinAggregateInputType = {
-    id?: true
+    bikeId?: true
     brand?: true
     model?: true
     year?: true
@@ -2284,7 +2284,7 @@ export namespace Prisma {
   }
 
   export type BikeMaxAggregateInputType = {
-    id?: true
+    bikeId?: true
     brand?: true
     model?: true
     year?: true
@@ -2294,7 +2294,7 @@ export namespace Prisma {
   }
 
   export type BikeCountAggregateInputType = {
-    id?: true
+    bikeId?: true
     brand?: true
     model?: true
     year?: true
@@ -2391,7 +2391,7 @@ export namespace Prisma {
   }
 
   export type BikeGroupByOutputType = {
-    id: string
+    bikeId: string
     brand: string
     model: string
     year: number
@@ -2420,7 +2420,7 @@ export namespace Prisma {
 
 
   export type BikeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    bikeId?: boolean
     brand?: boolean
     model?: boolean
     year?: boolean
@@ -2433,7 +2433,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["bike"]>
 
   export type BikeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    bikeId?: boolean
     brand?: boolean
     model?: boolean
     year?: boolean
@@ -2444,7 +2444,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["bike"]>
 
   export type BikeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    bikeId?: boolean
     brand?: boolean
     model?: boolean
     year?: boolean
@@ -2455,7 +2455,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["bike"]>
 
   export type BikeSelectScalar = {
-    id?: boolean
+    bikeId?: boolean
     brand?: boolean
     model?: boolean
     year?: boolean
@@ -2464,7 +2464,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type BikeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "brand" | "model" | "year" | "customerId" | "createdAt" | "updatedAt", ExtArgs["result"]["bike"]>
+  export type BikeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"bikeId" | "brand" | "model" | "year" | "customerId" | "createdAt" | "updatedAt", ExtArgs["result"]["bike"]>
   export type BikeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     customer?: boolean | CustomerDefaultArgs<ExtArgs>
     services?: boolean | Bike$servicesArgs<ExtArgs>
@@ -2484,7 +2484,7 @@ export namespace Prisma {
       services: Prisma.$ServicePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      bikeId: string
       brand: string
       model: string
       year: number
@@ -2574,8 +2574,8 @@ export namespace Prisma {
      * // Get first 10 Bikes
      * const bikes = await prisma.bike.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const bikeWithIdOnly = await prisma.bike.findMany({ select: { id: true } })
+     * // Only select the `bikeId`
+     * const bikeWithBikeIdOnly = await prisma.bike.findMany({ select: { bikeId: true } })
      * 
      */
     findMany<T extends BikeFindManyArgs>(args?: SelectSubset<T, BikeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -2619,9 +2619,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Create many Bikes and only return the `id`
-     * const bikeWithIdOnly = await prisma.bike.createManyAndReturn({
-     *   select: { id: true },
+     * // Create many Bikes and only return the `bikeId`
+     * const bikeWithBikeIdOnly = await prisma.bike.createManyAndReturn({
+     *   select: { bikeId: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -2710,9 +2710,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Bikes and only return the `id`
-     * const bikeWithIdOnly = await prisma.bike.updateManyAndReturn({
-     *   select: { id: true },
+     * // Update zero or more Bikes and only return the `bikeId`
+     * const bikeWithBikeIdOnly = await prisma.bike.updateManyAndReturn({
+     *   select: { bikeId: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2916,7 +2916,7 @@ export namespace Prisma {
    * Fields of the Bike model
    */
   interface BikeFieldRefs {
-    readonly id: FieldRef<"Bike", 'String'>
+    readonly bikeId: FieldRef<"Bike", 'String'>
     readonly brand: FieldRef<"Bike", 'String'>
     readonly model: FieldRef<"Bike", 'String'>
     readonly year: FieldRef<"Bike", 'Int'>
@@ -3372,7 +3372,7 @@ export namespace Prisma {
   }
 
   export type ServiceMinAggregateOutputType = {
-    id: string | null
+    serviceId: string | null
     bikeId: string | null
     description: string | null
     serviceDate: Date | null
@@ -3383,7 +3383,7 @@ export namespace Prisma {
   }
 
   export type ServiceMaxAggregateOutputType = {
-    id: string | null
+    serviceId: string | null
     bikeId: string | null
     description: string | null
     serviceDate: Date | null
@@ -3394,7 +3394,7 @@ export namespace Prisma {
   }
 
   export type ServiceCountAggregateOutputType = {
-    id: number
+    serviceId: number
     bikeId: number
     description: number
     serviceDate: number
@@ -3407,7 +3407,7 @@ export namespace Prisma {
 
 
   export type ServiceMinAggregateInputType = {
-    id?: true
+    serviceId?: true
     bikeId?: true
     description?: true
     serviceDate?: true
@@ -3418,7 +3418,7 @@ export namespace Prisma {
   }
 
   export type ServiceMaxAggregateInputType = {
-    id?: true
+    serviceId?: true
     bikeId?: true
     description?: true
     serviceDate?: true
@@ -3429,7 +3429,7 @@ export namespace Prisma {
   }
 
   export type ServiceCountAggregateInputType = {
-    id?: true
+    serviceId?: true
     bikeId?: true
     description?: true
     serviceDate?: true
@@ -3513,7 +3513,7 @@ export namespace Prisma {
   }
 
   export type ServiceGroupByOutputType = {
-    id: string
+    serviceId: string
     bikeId: string
     description: string
     serviceDate: Date
@@ -3541,7 +3541,7 @@ export namespace Prisma {
 
 
   export type ServiceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    serviceId?: boolean
     bikeId?: boolean
     description?: boolean
     serviceDate?: boolean
@@ -3553,7 +3553,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    serviceId?: boolean
     bikeId?: boolean
     description?: boolean
     serviceDate?: boolean
@@ -3565,7 +3565,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+    serviceId?: boolean
     bikeId?: boolean
     description?: boolean
     serviceDate?: boolean
@@ -3577,7 +3577,7 @@ export namespace Prisma {
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectScalar = {
-    id?: boolean
+    serviceId?: boolean
     bikeId?: boolean
     description?: boolean
     serviceDate?: boolean
@@ -3587,7 +3587,7 @@ export namespace Prisma {
     status?: boolean
   }
 
-  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "bikeId" | "description" | "serviceDate" | "completionDate" | "createdAt" | "updatedAt" | "status", ExtArgs["result"]["service"]>
+  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"serviceId" | "bikeId" | "description" | "serviceDate" | "completionDate" | "createdAt" | "updatedAt" | "status", ExtArgs["result"]["service"]>
   export type ServiceInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     bike?: boolean | BikeDefaultArgs<ExtArgs>
   }
@@ -3604,7 +3604,7 @@ export namespace Prisma {
       bike: Prisma.$BikePayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      serviceId: string
       bikeId: string
       description: string
       serviceDate: Date
@@ -3695,8 +3695,8 @@ export namespace Prisma {
      * // Get first 10 Services
      * const services = await prisma.service.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const serviceWithIdOnly = await prisma.service.findMany({ select: { id: true } })
+     * // Only select the `serviceId`
+     * const serviceWithServiceIdOnly = await prisma.service.findMany({ select: { serviceId: true } })
      * 
      */
     findMany<T extends ServiceFindManyArgs>(args?: SelectSubset<T, ServiceFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ServicePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -3740,9 +3740,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Create many Services and only return the `id`
-     * const serviceWithIdOnly = await prisma.service.createManyAndReturn({
-     *   select: { id: true },
+     * // Create many Services and only return the `serviceId`
+     * const serviceWithServiceIdOnly = await prisma.service.createManyAndReturn({
+     *   select: { serviceId: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -3831,9 +3831,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Services and only return the `id`
-     * const serviceWithIdOnly = await prisma.service.updateManyAndReturn({
-     *   select: { id: true },
+     * // Update zero or more Services and only return the `serviceId`
+     * const serviceWithServiceIdOnly = await prisma.service.updateManyAndReturn({
+     *   select: { serviceId: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4036,7 +4036,7 @@ export namespace Prisma {
    * Fields of the Service model
    */
   interface ServiceFieldRefs {
-    readonly id: FieldRef<"Service", 'String'>
+    readonly serviceId: FieldRef<"Service", 'String'>
     readonly bikeId: FieldRef<"Service", 'String'>
     readonly description: FieldRef<"Service", 'String'>
     readonly serviceDate: FieldRef<"Service", 'DateTime'>
@@ -4473,7 +4473,7 @@ export namespace Prisma {
 
 
   export const CustomerScalarFieldEnum: {
-    id: 'id',
+    customerId: 'customerId',
     email: 'email',
     name: 'name',
     phone: 'phone',
@@ -4485,7 +4485,7 @@ export namespace Prisma {
 
 
   export const BikeScalarFieldEnum: {
-    id: 'id',
+    bikeId: 'bikeId',
     brand: 'brand',
     model: 'model',
     year: 'year',
@@ -4498,7 +4498,7 @@ export namespace Prisma {
 
 
   export const ServiceScalarFieldEnum: {
-    id: 'id',
+    serviceId: 'serviceId',
     bikeId: 'bikeId',
     description: 'description',
     serviceDate: 'serviceDate',
@@ -4617,7 +4617,7 @@ export namespace Prisma {
     AND?: CustomerWhereInput | CustomerWhereInput[]
     OR?: CustomerWhereInput[]
     NOT?: CustomerWhereInput | CustomerWhereInput[]
-    id?: StringFilter<"Customer"> | string
+    customerId?: StringFilter<"Customer"> | string
     email?: StringFilter<"Customer"> | string
     name?: StringFilter<"Customer"> | string
     phone?: StringFilter<"Customer"> | string
@@ -4627,7 +4627,7 @@ export namespace Prisma {
   }
 
   export type CustomerOrderByWithRelationInput = {
-    id?: SortOrder
+    customerId?: SortOrder
     email?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -4637,7 +4637,7 @@ export namespace Prisma {
   }
 
   export type CustomerWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    customerId?: string
     email?: string
     AND?: CustomerWhereInput | CustomerWhereInput[]
     OR?: CustomerWhereInput[]
@@ -4647,10 +4647,10 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Customer"> | Date | string
     updatedAt?: DateTimeFilter<"Customer"> | Date | string
     bikes?: BikeListRelationFilter
-  }, "id" | "email">
+  }, "customerId" | "email">
 
   export type CustomerOrderByWithAggregationInput = {
-    id?: SortOrder
+    customerId?: SortOrder
     email?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -4665,7 +4665,7 @@ export namespace Prisma {
     AND?: CustomerScalarWhereWithAggregatesInput | CustomerScalarWhereWithAggregatesInput[]
     OR?: CustomerScalarWhereWithAggregatesInput[]
     NOT?: CustomerScalarWhereWithAggregatesInput | CustomerScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Customer"> | string
+    customerId?: StringWithAggregatesFilter<"Customer"> | string
     email?: StringWithAggregatesFilter<"Customer"> | string
     name?: StringWithAggregatesFilter<"Customer"> | string
     phone?: StringWithAggregatesFilter<"Customer"> | string
@@ -4677,7 +4677,7 @@ export namespace Prisma {
     AND?: BikeWhereInput | BikeWhereInput[]
     OR?: BikeWhereInput[]
     NOT?: BikeWhereInput | BikeWhereInput[]
-    id?: StringFilter<"Bike"> | string
+    bikeId?: StringFilter<"Bike"> | string
     brand?: StringFilter<"Bike"> | string
     model?: StringFilter<"Bike"> | string
     year?: IntFilter<"Bike"> | number
@@ -4689,7 +4689,7 @@ export namespace Prisma {
   }
 
   export type BikeOrderByWithRelationInput = {
-    id?: SortOrder
+    bikeId?: SortOrder
     brand?: SortOrder
     model?: SortOrder
     year?: SortOrder
@@ -4701,7 +4701,7 @@ export namespace Prisma {
   }
 
   export type BikeWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    bikeId?: string
     AND?: BikeWhereInput | BikeWhereInput[]
     OR?: BikeWhereInput[]
     NOT?: BikeWhereInput | BikeWhereInput[]
@@ -4713,10 +4713,10 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"Bike"> | Date | string
     customer?: XOR<CustomerScalarRelationFilter, CustomerWhereInput>
     services?: ServiceListRelationFilter
-  }, "id">
+  }, "bikeId">
 
   export type BikeOrderByWithAggregationInput = {
-    id?: SortOrder
+    bikeId?: SortOrder
     brand?: SortOrder
     model?: SortOrder
     year?: SortOrder
@@ -4734,7 +4734,7 @@ export namespace Prisma {
     AND?: BikeScalarWhereWithAggregatesInput | BikeScalarWhereWithAggregatesInput[]
     OR?: BikeScalarWhereWithAggregatesInput[]
     NOT?: BikeScalarWhereWithAggregatesInput | BikeScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Bike"> | string
+    bikeId?: StringWithAggregatesFilter<"Bike"> | string
     brand?: StringWithAggregatesFilter<"Bike"> | string
     model?: StringWithAggregatesFilter<"Bike"> | string
     year?: IntWithAggregatesFilter<"Bike"> | number
@@ -4747,7 +4747,7 @@ export namespace Prisma {
     AND?: ServiceWhereInput | ServiceWhereInput[]
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
-    id?: StringFilter<"Service"> | string
+    serviceId?: StringFilter<"Service"> | string
     bikeId?: StringFilter<"Service"> | string
     description?: StringFilter<"Service"> | string
     serviceDate?: DateTimeFilter<"Service"> | Date | string
@@ -4759,7 +4759,7 @@ export namespace Prisma {
   }
 
   export type ServiceOrderByWithRelationInput = {
-    id?: SortOrder
+    serviceId?: SortOrder
     bikeId?: SortOrder
     description?: SortOrder
     serviceDate?: SortOrder
@@ -4771,7 +4771,7 @@ export namespace Prisma {
   }
 
   export type ServiceWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+    serviceId?: string
     AND?: ServiceWhereInput | ServiceWhereInput[]
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
@@ -4783,10 +4783,10 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"Service"> | Date | string
     status?: EnumServiceStatusFilter<"Service"> | $Enums.ServiceStatus
     bike?: XOR<BikeScalarRelationFilter, BikeWhereInput>
-  }, "id">
+  }, "serviceId">
 
   export type ServiceOrderByWithAggregationInput = {
-    id?: SortOrder
+    serviceId?: SortOrder
     bikeId?: SortOrder
     description?: SortOrder
     serviceDate?: SortOrder
@@ -4803,7 +4803,7 @@ export namespace Prisma {
     AND?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
     OR?: ServiceScalarWhereWithAggregatesInput[]
     NOT?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Service"> | string
+    serviceId?: StringWithAggregatesFilter<"Service"> | string
     bikeId?: StringWithAggregatesFilter<"Service"> | string
     description?: StringWithAggregatesFilter<"Service"> | string
     serviceDate?: DateTimeWithAggregatesFilter<"Service"> | Date | string
@@ -4814,7 +4814,7 @@ export namespace Prisma {
   }
 
   export type CustomerCreateInput = {
-    id?: string
+    customerId?: string
     email: string
     name: string
     phone: string
@@ -4824,7 +4824,7 @@ export namespace Prisma {
   }
 
   export type CustomerUncheckedCreateInput = {
-    id?: string
+    customerId?: string
     email: string
     name: string
     phone: string
@@ -4834,7 +4834,7 @@ export namespace Prisma {
   }
 
   export type CustomerUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -4844,7 +4844,7 @@ export namespace Prisma {
   }
 
   export type CustomerUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -4854,7 +4854,7 @@ export namespace Prisma {
   }
 
   export type CustomerCreateManyInput = {
-    id?: string
+    customerId?: string
     email: string
     name: string
     phone: string
@@ -4863,7 +4863,7 @@ export namespace Prisma {
   }
 
   export type CustomerUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -4872,7 +4872,7 @@ export namespace Prisma {
   }
 
   export type CustomerUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -4881,7 +4881,7 @@ export namespace Prisma {
   }
 
   export type BikeCreateInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -4892,7 +4892,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedCreateInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -4903,7 +4903,7 @@ export namespace Prisma {
   }
 
   export type BikeUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -4914,7 +4914,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -4925,7 +4925,7 @@ export namespace Prisma {
   }
 
   export type BikeCreateManyInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -4935,7 +4935,7 @@ export namespace Prisma {
   }
 
   export type BikeUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -4944,7 +4944,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -4954,7 +4954,7 @@ export namespace Prisma {
   }
 
   export type ServiceCreateInput = {
-    id?: string
+    serviceId?: string
     description: string
     serviceDate?: Date | string
     completionDate?: Date | string | null
@@ -4965,7 +4965,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedCreateInput = {
-    id?: string
+    serviceId?: string
     bikeId: string
     description: string
     serviceDate?: Date | string
@@ -4976,7 +4976,7 @@ export namespace Prisma {
   }
 
   export type ServiceUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
     completionDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -4987,7 +4987,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     bikeId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4998,7 +4998,7 @@ export namespace Prisma {
   }
 
   export type ServiceCreateManyInput = {
-    id?: string
+    serviceId?: string
     bikeId: string
     description: string
     serviceDate?: Date | string
@@ -5009,7 +5009,7 @@ export namespace Prisma {
   }
 
   export type ServiceUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
     completionDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -5019,7 +5019,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     bikeId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -5066,7 +5066,7 @@ export namespace Prisma {
   }
 
   export type CustomerCountOrderByAggregateInput = {
-    id?: SortOrder
+    customerId?: SortOrder
     email?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -5075,7 +5075,7 @@ export namespace Prisma {
   }
 
   export type CustomerMaxOrderByAggregateInput = {
-    id?: SortOrder
+    customerId?: SortOrder
     email?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -5084,7 +5084,7 @@ export namespace Prisma {
   }
 
   export type CustomerMinOrderByAggregateInput = {
-    id?: SortOrder
+    customerId?: SortOrder
     email?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -5151,7 +5151,7 @@ export namespace Prisma {
   }
 
   export type BikeCountOrderByAggregateInput = {
-    id?: SortOrder
+    bikeId?: SortOrder
     brand?: SortOrder
     model?: SortOrder
     year?: SortOrder
@@ -5165,7 +5165,7 @@ export namespace Prisma {
   }
 
   export type BikeMaxOrderByAggregateInput = {
-    id?: SortOrder
+    bikeId?: SortOrder
     brand?: SortOrder
     model?: SortOrder
     year?: SortOrder
@@ -5175,7 +5175,7 @@ export namespace Prisma {
   }
 
   export type BikeMinOrderByAggregateInput = {
-    id?: SortOrder
+    bikeId?: SortOrder
     brand?: SortOrder
     model?: SortOrder
     year?: SortOrder
@@ -5233,7 +5233,7 @@ export namespace Prisma {
   }
 
   export type ServiceCountOrderByAggregateInput = {
-    id?: SortOrder
+    serviceId?: SortOrder
     bikeId?: SortOrder
     description?: SortOrder
     serviceDate?: SortOrder
@@ -5244,7 +5244,7 @@ export namespace Prisma {
   }
 
   export type ServiceMaxOrderByAggregateInput = {
-    id?: SortOrder
+    serviceId?: SortOrder
     bikeId?: SortOrder
     description?: SortOrder
     serviceDate?: SortOrder
@@ -5255,7 +5255,7 @@ export namespace Prisma {
   }
 
   export type ServiceMinOrderByAggregateInput = {
-    id?: SortOrder
+    serviceId?: SortOrder
     bikeId?: SortOrder
     description?: SortOrder
     serviceDate?: SortOrder
@@ -5573,7 +5573,7 @@ export namespace Prisma {
   }
 
   export type BikeCreateWithoutCustomerInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -5583,7 +5583,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedCreateWithoutCustomerInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -5622,7 +5622,7 @@ export namespace Prisma {
     AND?: BikeScalarWhereInput | BikeScalarWhereInput[]
     OR?: BikeScalarWhereInput[]
     NOT?: BikeScalarWhereInput | BikeScalarWhereInput[]
-    id?: StringFilter<"Bike"> | string
+    bikeId?: StringFilter<"Bike"> | string
     brand?: StringFilter<"Bike"> | string
     model?: StringFilter<"Bike"> | string
     year?: IntFilter<"Bike"> | number
@@ -5632,7 +5632,7 @@ export namespace Prisma {
   }
 
   export type CustomerCreateWithoutBikesInput = {
-    id?: string
+    customerId?: string
     email: string
     name: string
     phone: string
@@ -5641,7 +5641,7 @@ export namespace Prisma {
   }
 
   export type CustomerUncheckedCreateWithoutBikesInput = {
-    id?: string
+    customerId?: string
     email: string
     name: string
     phone: string
@@ -5655,7 +5655,7 @@ export namespace Prisma {
   }
 
   export type ServiceCreateWithoutBikeInput = {
-    id?: string
+    serviceId?: string
     description: string
     serviceDate?: Date | string
     completionDate?: Date | string | null
@@ -5665,7 +5665,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedCreateWithoutBikeInput = {
-    id?: string
+    serviceId?: string
     description: string
     serviceDate?: Date | string
     completionDate?: Date | string | null
@@ -5696,7 +5696,7 @@ export namespace Prisma {
   }
 
   export type CustomerUpdateWithoutBikesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -5705,7 +5705,7 @@ export namespace Prisma {
   }
 
   export type CustomerUncheckedUpdateWithoutBikesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    customerId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -5733,7 +5733,7 @@ export namespace Prisma {
     AND?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
     OR?: ServiceScalarWhereInput[]
     NOT?: ServiceScalarWhereInput | ServiceScalarWhereInput[]
-    id?: StringFilter<"Service"> | string
+    serviceId?: StringFilter<"Service"> | string
     bikeId?: StringFilter<"Service"> | string
     description?: StringFilter<"Service"> | string
     serviceDate?: DateTimeFilter<"Service"> | Date | string
@@ -5744,7 +5744,7 @@ export namespace Prisma {
   }
 
   export type BikeCreateWithoutServicesInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -5754,7 +5754,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedCreateWithoutServicesInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -5780,7 +5780,7 @@ export namespace Prisma {
   }
 
   export type BikeUpdateWithoutServicesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -5790,7 +5790,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedUpdateWithoutServicesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -5800,7 +5800,7 @@ export namespace Prisma {
   }
 
   export type BikeCreateManyCustomerInput = {
-    id?: string
+    bikeId?: string
     brand: string
     model: string
     year: number
@@ -5809,7 +5809,7 @@ export namespace Prisma {
   }
 
   export type BikeUpdateWithoutCustomerInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -5819,7 +5819,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedUpdateWithoutCustomerInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -5829,7 +5829,7 @@ export namespace Prisma {
   }
 
   export type BikeUncheckedUpdateManyWithoutCustomerInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    bikeId?: StringFieldUpdateOperationsInput | string
     brand?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     year?: IntFieldUpdateOperationsInput | number
@@ -5838,7 +5838,7 @@ export namespace Prisma {
   }
 
   export type ServiceCreateManyBikeInput = {
-    id?: string
+    serviceId?: string
     description: string
     serviceDate?: Date | string
     completionDate?: Date | string | null
@@ -5848,7 +5848,7 @@ export namespace Prisma {
   }
 
   export type ServiceUpdateWithoutBikeInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
     completionDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -5858,7 +5858,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedUpdateWithoutBikeInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
     completionDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -5868,7 +5868,7 @@ export namespace Prisma {
   }
 
   export type ServiceUncheckedUpdateManyWithoutBikeInput = {
-    id?: StringFieldUpdateOperationsInput | string
+    serviceId?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     serviceDate?: DateTimeFieldUpdateOperationsInput | Date | string
     completionDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
