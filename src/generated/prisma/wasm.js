@@ -137,11 +137,13 @@ exports.Prisma.BikeScalarFieldEnum = {
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {
-  serviceId: 'serviceId',
+  id: 'id',
   bikeId: 'bikeId',
   description: 'description',
   serviceDate: 'serviceDate',
   completionDate: 'completionDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
   status: 'status'
 };
 
