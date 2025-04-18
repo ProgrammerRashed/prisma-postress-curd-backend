@@ -3,14 +3,10 @@ import SendResponse from "../../../utils/SendResponse";
 import httpStatus from "http-status";
 import { CustomerService } from "./customer.service";
 
-
-
 const createCustomer = CatchAsync(async (req, res) => {
-
-  console.log(req.body)
   const result = await CustomerService.createCustomerIntoDB(req.body);
   SendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: httpStatus.CREATED,
     success: true,
     message: "Customer Created Successfully!!",
     data: result,

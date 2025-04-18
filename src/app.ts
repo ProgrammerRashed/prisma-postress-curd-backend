@@ -1,10 +1,10 @@
 import express, { Application, NextFunction, Request, Response } from "express"
 import cors from "cors"
-import { customerRouter } from "./app/modules/customers/customer.route"
 import globalErrorHandler from "./app/middlewares/globalErrorHandler"
 const app: Application = express()
 
 import httpStatus from "http-status";
+import router from "./app/routers"
 app.use(cors())
 
 // Parsher 
@@ -19,7 +19,7 @@ app.get("/", (req: Request, res: Response)=>{
 
 
 
-app.use("/api", customerRouter)
+app.use("/api", router);
 
 app.use(globalErrorHandler);
 
