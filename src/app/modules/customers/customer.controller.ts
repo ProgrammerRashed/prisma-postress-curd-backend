@@ -8,7 +8,7 @@ const createCustomer = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.CREATED,
     success: true,
-    message: "Customer Created Successfully!!",
+    message: "Customer created successfully.",
     data: result,
   });
 });
@@ -18,18 +18,18 @@ const getAllCustomers = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Customers Retrived Successfully!",
+    message: "Customers retrieved successfully.",
     data: result,
   });
 });
 
-const getSingleCustomers = CatchAsync(async (req, res) => {
+const getSingleCustomer = CatchAsync(async (req, res) => {
   const { id } = req.params;
   const result = await CustomerService.getSingleCustomerFromDB(id);
   SendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Customer Retrived Successfully!",
+    message: "Customer retrieved successfully.",
     data: result,
   });
 });
@@ -40,7 +40,7 @@ const deleteCustomer = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Customer Deleted Successfully!",
+    message: "Customer deleted successfully.",
     data: null,
   });
 });
@@ -51,7 +51,7 @@ const updateCustomer = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Customer Updated successfully!",
+    message: "Customer updated successfully.",
     data: result,
   });
 });
@@ -59,7 +59,8 @@ const updateCustomer = CatchAsync(async (req, res) => {
 export const CustomerController = {
   createCustomer,
   getAllCustomers,
-  getSingleCustomers,
+  getSingleCustomer,
   updateCustomer,
   deleteCustomer,
 };
+
