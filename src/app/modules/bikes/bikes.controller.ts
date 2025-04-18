@@ -8,7 +8,7 @@ const createBike = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.CREATED,
     success: true,
-    message: "Bike created successfully.",
+    message: "Bike added successfully.",
     data: result,
   });
 });

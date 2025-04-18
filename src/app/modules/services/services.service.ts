@@ -21,7 +21,7 @@ const getOverdueServicesFromDB = async (): Promise<Service[]> => {
   return prisma.service.findMany({
     where: {
       status: {
-        in: ['PENDING', 'IN_PROGRESS'],
+        in: ['pending', 'in_progress'],
       },
       serviceDate: {
         lt: sevenDaysAgo,
@@ -47,7 +47,7 @@ const updateServiceIntoDB = async (
     },
     data: {
       ...payload,
-      status: "DONE",
+      status: "done",
     },
   });
 };
