@@ -1,50 +1,49 @@
-generator client {
-  provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
-}
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-//ENUMS
-enum UserRole {
-  SUPER_ADMIN
-  ADMIN
-  DOCTOR
-  PAITENT
+// ENUMS
+enum ServiceStatus {
+  PENDING
+  IN_PROGRESS
+  DONE
 }
 
-enum UserStatus {
-  ACTIVE 
-  BLOCK
+model Customer {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  phone     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bikes     Bike[]
+
+  @@map("customers")
 }
 
-model User {
-  id String @id @default(uuid())
-  email String @unique
-  password String
-  role UserRole @default(PAITENT)
-  needPasswordChange Boolean @default(true)
-  status UserStatus @default(ACTIVE)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  admin Admin?
+model Bike {
+  id         String    @id @default(uuid())
+  brand      String
+  model      String
+  year       Int
+  customerId String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  services   Service[]
 
-  @@map("users")
-} 
+  @@map("bikes")
+}
 
-model Admin{
-  id String @id @default(uuid())
-  name String 
-  email String @unique
-  profilePhoto String?
-  contactNumber String
-  isDeleted Boolean @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  user           User     @relation(fields: [email], references: [email])
+model Service {
+  serviceId      String        @id @default(uuid())
+  bikeId         String
+  description    String
+  serviceDate    DateTime      @default(now())
+  completionDate DateTime?
+  status         ServiceStatus @default(PENDING)
+  bike           Bike          @relation(fields: [bikeId], references: [id])
 
-  @@map("admins")
+  @@map("service")
 }
