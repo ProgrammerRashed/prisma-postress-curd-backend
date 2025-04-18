@@ -14,9 +14,22 @@ const getAllServicesFromDB = async (): Promise<Service[]> => {
   });
 };
 
-const getOverdueServicesFromDB = async ():Promise<Service[]> => {
-  return prisma.service.findMany()
-}
+const getOverdueServicesFromDB = async (): Promise<Service[]> => {
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+  return prisma.service.findMany({
+    where: {
+      status: {
+        in: ['PENDING', 'IN_PROGRESS'],
+      },
+      serviceDate: {
+        lt: sevenDaysAgo,
+      },
+    },
+  });
+};
+
 
 const getSingleServiceFromDB = async (id: string): Promise<Service | null> => {
   return prisma.service.findUniqueOrThrow({  where: {
