@@ -1,4 +1,4 @@
-import { Bike } from "../../../generated/prisma";
+import { Bike } from "@prisma/client";
 import prisma from "../../../utils/Prisma";
 
 const createBikeIntoDB = async (payload: Bike) => {

@@ -27,7 +27,7 @@ const getOverdueServices = CatchAsync(async (req, res) => {
   SendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "All services retrieved successfully.",
+    message: "Overdue or pending services fetched successfully",
     data: result,
   });
 });

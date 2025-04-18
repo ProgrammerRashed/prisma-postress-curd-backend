@@ -1,4 +1,4 @@
-import { Service } from "../../../generated/prisma";
+import { Service } from "@prisma/client";
 import prisma from "../../../utils/Prisma";
 
 type CreateServiceInput = Omit<Service, "id" | "createdAt" | "updatedAt">;
