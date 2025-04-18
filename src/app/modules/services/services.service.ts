@@ -14,6 +14,10 @@ const getAllServicesFromDB = async (): Promise<Service[]> => {
   });
 };
 
+const getOverdueServicesFromDB = async ():Promise<Service[]> => {
+  return prisma.service.findMany()
+}
+
 const getSingleServiceFromDB = async (id: string): Promise<Service | null> => {
   return prisma.service.findUnique({ where: { id } });
 };
@@ -38,6 +42,7 @@ const deleteSingleServiceFromDB = async (id: string): Promise<Service> => {
 export const ServicesService = {
   createServiceIntoDB,
   getAllServicesFromDB,
+  getOverdueServicesFromDB,
   getSingleServiceFromDB,
   updateServiceIntoDB,
   deleteSingleServiceFromDB,

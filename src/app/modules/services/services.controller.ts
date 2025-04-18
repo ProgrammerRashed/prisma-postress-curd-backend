@@ -22,6 +22,15 @@ const getAllServices = CatchAsync(async (req, res) => {
     data: result,
   });
 });
+const getOverdueServices = CatchAsync(async (req, res) => {
+  const result = await ServicesService.getOverdueServicesFromDB();
+  SendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "All services retrieved successfully.",
+    data: result,
+  });
+});
 
 const getSingleService = CatchAsync(async (req, res) => {
   const { id } = req.params;
@@ -59,6 +68,7 @@ const updateService = CatchAsync(async (req, res) => {
 export const ServiceController = {
   createService,
   getAllServices,
+  getOverdueServices,
   getSingleService,
   updateService,
   deleteService,
