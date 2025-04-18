@@ -183,11 +183,12 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:12345678@localhost:5432/ph_healthcare?schema=public"
+        "value": null
       }
     }
   },

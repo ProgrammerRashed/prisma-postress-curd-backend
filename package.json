@@ -1,13 +1,12 @@
 {
-  "name": "ph-healthcare-server",
+  "name": "prisma-curd-server",
   "version": "1.0.0",
-  "description": "this is a healthcare app for ph.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "preinstall": "prisma generate"
   },
-  "author": "",
+  "author": "Rashed",
   "license": "ISC",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
